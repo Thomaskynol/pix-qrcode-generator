@@ -1,2 +1,17 @@
-# pix-qrcode-generator
-A Python tool to generate Pix QR Codes with dynamic parameters such as recipient's name, key, city, value, and transaction ID. This tool uses CRC16 for validation and generates a QR code that can be scanned for Pix payments.
+# Pix QR Code Generator
+
+This is a Python-based tool to generate Pix QR codes, a payment system in Brazil. The tool takes dynamic inputs such as the recipient's name, Pix key, city, value, and transaction ID, and generates a valid Pix QR code.
+
+## Features:
+- Generates Pix QR code with customizable parameters.
+- Supports dynamic values such as name, key, city, and amount.
+- Uses CRC16 checksum for data integrity.
+- Saves the generated QR code as a PNG image file.
+
+## How to Use:
+
+1. Just Do It in the code:
+   ```python
+   #                          name                       key                  city     value     txtId
+   payloadCool = Payload('Michael Jackson', 'michaeljackson123@gmail.com', 'NEW YORK', 10.00, 'division')
+   payloadCool.generatePayLoadCode()
